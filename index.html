@@ -2,26 +2,24 @@
 <html lang="mn">
 <head>
   <meta charset="UTF-8" />
-  <title>My Love Letter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Love for You 💖</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <canvas id="fireworks"></canvas>
+  <div class="container">
+    <h1>Хайраа энд дараад үздээ 💗</h1>
+    <div class="speech">Дарна уу...</div>
+    <button id="nextPoem">💖 Үргэлжлүүлэх</button>
+    <div id="poem" class="poem-block"></div>
+    <div class="footer">Munkhtuvshin Namuunzaya<br/>2025.06.01</div>
+  </div>
 
-  <h1>Хайраа энд дараад үздээ 💗</h1>
-  <div id="poem-container" class="poem-box">Дарна уу...</div>
-  <button onclick="nextPoem()">💗 Үргэлжлүүлэх</button>
-
-  <div class="footer">Munkhtuvshin Namuunzaya<br>2025.06.01</div>
-
-  <!-- 🔊 Audio toggle button (user interaction тулд) -->
-  <button id="playMusicBtn">🎶 Дууг тоглуулах</button>
-
-  <!-- Background Music -->
-  <audio id="bg-music" loop>
-    <source src="music.mp3" type="audio/mp3">
+  <audio id="bgMusic" autoplay loop>
+    <source src="romantic.mp3" type="audio/mp3" />
   </audio>
 
+  <canvas id="fireworks"></canvas>
   <script src="script.js"></script>
 </body>
 </html>

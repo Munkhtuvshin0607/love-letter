@@ -1,68 +1,68 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #ffe6f0;
+  padding: 0;
+  background-color: #ffe6f0;
+  font-family: "Arial", sans-serif;
   overflow-x: hidden;
-  color: #880e4f;
+}
+
+.container {
   text-align: center;
-  padding-top: 60px;
+  padding: 50px 20px;
 }
 
 h1 {
   font-size: 28px;
-  color: #d81b60;
-  margin-bottom: 20px;
+  color: hotpink;
+  margin-bottom: 10px;
+}
+
+.speech {
+  display: inline-block;
+  background: #fff0f5;
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: 2px solid #333;
+  font-style: italic;
+  color: #444;
 }
 
 button {
-  padding: 12px 24px;
-  background: #ff4081;
+  background-color: #ff4081;
   color: white;
-  font-size: 16px;
   border: none;
-  border-radius: 30px;
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin-top: 20px;
   cursor: pointer;
-  margin: 20px 10px;
-  transition: background 0.3s;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
 button:hover {
-  background: #e91e63;
+  background-color: #ff77a9;
 }
 
-.poem-box {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255, 105, 135, 0.3);
+.poem-block {
+  margin-top: 30px;
+  white-space: pre-wrap;
   font-size: 18px;
-  line-height: 1.8;
-  animation: fade 0.8s ease-in-out;
-}
-
-@keyframes fade {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
+  color: #333;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .footer {
-  position: fixed;
-  bottom: 20px;
-  right: 40px;
-  color: crimson;
+  margin-top: 50px;
+  color: red;
   font-size: 14px;
-  text-align: right;
-  line-height: 1.4;
 }
 
-#fireworks {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
