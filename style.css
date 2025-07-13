@@ -25,7 +25,8 @@ body {
   line-height: 1.6;
   color: #333;
   min-height: 200px;
-  transition: all 0.5s ease;
+  transition: opacity 0.8s ease;
+  opacity: 1;
 }
 
 .btn-group {
@@ -57,18 +58,9 @@ footer {
   text-align: right;
 }
 
-/* 🔥 Fireworks animation */
 @keyframes firework {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-    filter: blur(0px);
-  }
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-    filter: blur(3px);
-  }
+  0% { transform: scale(0); opacity: 1; filter: blur(0px); }
+  100% { transform: scale(1.5); opacity: 0; filter: blur(3px); }
 }
 
 .firework {
@@ -81,14 +73,12 @@ footer {
   z-index: 999;
 }
 
-/* 🎨 Random colors (add via JS or classes) */
 .firework:nth-child(3n) { background-color: #ff4081; }
 .firework:nth-child(4n) { background-color: #9c27b0; }
 .firework:nth-child(5n) { background-color: #2196f3; }
 .firework:nth-child(6n) { background-color: #4caf50; }
 .firework:nth-child(7n) { background-color: #fbc02d; }
 
-/* Optional: Heart shape particles (🎈 custom class) */
 .heart-firework {
   width: 14px;
   height: 14px;
@@ -108,12 +98,5 @@ footer {
   position: absolute;
 }
 
-.heart-firework::before {
-  top: -7px;
-  left: 0;
-}
-
-.heart-firework::after {
-  left: -7px;
-  top: 0;
-}
+.heart-firework::before { top: -7px; left: 0; }
+.heart-firework::after { left: -7px; top: 0; }
