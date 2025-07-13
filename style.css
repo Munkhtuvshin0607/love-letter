@@ -1,29 +1,47 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #fff0f5;
-  padding: 20px;
-  margin: 0;
-}
-
-.love-poem {
-  max-width: 700px;
-  margin: 30px auto;
-  font-size: 18px;
-  line-height: 1.8;
+  background: #ffe6f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
   color: #880e4f;
-  background: #ffffff;
+}
+
+h1 {
+  color: #d81b60;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 12px 24px;
+  background: #ff4081;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #e91e63;
+}
+
+.poem-box {
+  max-width: 700px;
   padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(255, 192, 203, 0.4);
-  animation: fadeInPoem 1.5s ease;
-}
-
-.love-poem p {
-  margin-bottom: 16px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 105, 135, 0.3);
+  font-size: 18px;
+  line-height: 1.7;
   text-align: center;
+  animation: fade 0.8s ease-in-out;
 }
 
-@keyframes fadeInPoem {
-  from { opacity: 0; transform: translateY(-10px); }
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
