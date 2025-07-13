@@ -1,1 +1,71 @@
-/* Final version style.css with fireworks and styling fixes */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffe4ed;
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.title {
+  margin-top: 50px;
+  font-size: 2rem;
+  color: #e91e63;
+  font-weight: bold;
+}
+
+.poem-box {
+  width: 70%;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  min-height: 200px;
+}
+
+.btn-group {
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  margin: 10px;
+  background-color: #ff4081;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #e91e63;
+}
+
+footer {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  color: red;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+@keyframes firework {
+  0% { transform: scale(0); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.firework {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff4081;
+  border-radius: 50%;
+  animation: firework 1s ease-out forwards;
+}
