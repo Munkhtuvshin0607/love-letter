@@ -2,14 +2,19 @@
 <html lang="mn">
 <head>
   <meta charset="UTF-8">
-  <title>For You ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Love for You ❤️</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <audio id="bgMusic" src="romantic.mp3" loop></audio>
+
+  <div class="background-hearts"></div>
+
   <div class="container">
-    <div class="message" id="loveMessage">My Heart Beats for You</div>
+    <h1 id="typewriter"></h1>
     <div class="heart"></div>
-    <button id="showPopup">Click Me 💖</button>
+    <button id="loveButton">Click me 💖</button>
   </div>
 
   <div class="popup" id="popup">
@@ -20,6 +25,26 @@
     </div>
   </div>
 
+  <canvas id="fireworks"></canvas>
   <script src="script.js"></script>
 </body>
+<body>
+  <!-- 🎶 Хөгжим тоглогч -->
+  <audio id="bgMusic" src="romantic.mp3" loop></audio>
+
+  <div class="container">
+    <h1 id="typewriter"></h1>
+    <div class="heart"></div>
+    
+    <!-- 🎵 YouTube-аар тоглуулах товч -->
+    <button id="playMusic">Play Music 🎵</button>
+
+    <!-- 💖 Хайрын поп-ап -->
+    <button id="loveButton">Click me 💖</button>
+  </div>
+
+  <!-- 🎇 Fireworks -->
+  <canvas id="fireworks"></canvas>
+</body>
+
 </html>
