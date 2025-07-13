@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="mn">
 <head>
-  <meta charset="UTF-8">
-  <title>Хайрын шүлэг</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>My Love Letter</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Хайраа энд дараад үздээ 🩷</h1>
+  <canvas id="fireworks"></canvas>
 
-  <!-- ❗️Энэ шүлэг харагдах блок -->
+  <h1>Хайраа энд дараад үздээ 💗</h1>
   <div id="poem-container" class="poem-box">Дарна уу...</div>
+  <button onclick="nextPoem()">💗 Үргэлжлүүлэх</button>
 
-  <button onclick="nextPoem()">🩷 Үргэлжлүүлэх</button>
+  <div class="footer">Munkhtuvshin Namuunzaya<br>2025.06.01</div>
+
+  <!-- 🔊 Audio toggle button (user interaction тулд) -->
+  <button id="playMusicBtn">🎶 Дууг тоглуулах</button>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mp3">
+  </audio>
 
   <script src="script.js"></script>
 </body>
