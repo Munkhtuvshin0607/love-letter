@@ -1,187 +1,29 @@
-/* Ерөнхий стиль */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  background: radial-gradient(circle, #fff0f5, #ffe6f0);
   font-family: 'Segoe UI', sans-serif;
-  overflow: hidden;
-  height: 100vh;
-  position: relative;
-}
-
-/* Арын олон жижиг зүрхэн background */
-.background-hearts {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-image: url('heart-bg.png'); /* Хэрвээ зураг ашиглаж байвал */
-  opacity: 0.05;
-  background-repeat: repeat;
-  background-size: 100px;
-  z-index: 0;
-}
-
-/* Контент хэсэг */
-.container {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  top: 10%;
+  background: #fff0f5;
   padding: 20px;
+  margin: 0;
 }
 
-/* Typewriter effect текст */
-#typewriter {
-  font-size: 26px;
-  color: #d1005c;
-  margin-bottom: 25px;
-  text-shadow: 0 0 10px #ffb6c1;
-  min-height: 40px;
-}
-
-/* Зүрхэн beat */
-.heart {
-  width: 100px;
-  height: 90px;
-  background-color: red;
-  position: relative;
-  transform: rotate(-45deg);
-  animation: beat 1s infinite;
-  box-shadow: 0 0 20px red;
-  margin: 0 auto 20px auto;
-}
-
-.heart::before,
-.heart::after {
-  content: "";
-  width: 100px;
-  height: 90px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-}
-
-.heart::before {
-  top: -50px;
-  left: 0;
-}
-
-.heart::after {
-  left: 50px;
-  top: 0;
-}
-
-@keyframes beat {
-  0%, 100% {
-    transform: rotate(-45deg) scale(1);
-    box-shadow: 0 0 10px red;
-  }
-  50% {
-    transform: rotate(-45deg) scale(1.2);
-    box-shadow: 0 0 25px red;
-  }
-}
-
-/* Товчлуур */
-button {
-  background-color: #ff4081;
-  border: none;
-  color: white;
-  padding: 12px 25px;
+.love-poem {
+  max-width: 700px;
+  margin: 30px auto;
   font-size: 18px;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 0 0 10px #ff80ab;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background-color: #f50057;
-  transform: scale(1.05);
-}
-
-/* Pop-up цонх */
-.popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  justify-content: center;
-  align-items: center;
-  z-index: 5;
-}
-
-.popup-content {
-  background: white;
-  padding: 30px;
+  line-height: 1.8;
+  color: #880e4f;
+  background: #ffffff;
+  padding: 20px;
   border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 192, 203, 0.4);
+  animation: fadeInPoem 1.5s ease;
+}
+
+.love-poem p {
+  margin-bottom: 16px;
   text-align: center;
-  animation: pop 0.5s ease;
-  box-shadow: 0 0 20px pink;
-  position: relative;
 }
 
-.popup-content h2 {
-  color: #d1005c;
-}
-
-.popup-content p {
-  font-size: 18px;
-  color: #555;
-  margin-top: 10px;
-}
-
-.close-btn {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 26px;
-  cursor: pointer;
-  color: #999;
-}
-
-@keyframes pop {
-  from {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-.animated-heart {
-  position: fixed;
-  top: -50px;
-  font-size: 20px;
-  color: pink;
-  opacity: 0.8;
-  animation: fall 6s linear infinite;
-  z-index: 1;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(120vh);
-    opacity: 0;
-  }
-}
-
-
-/* Fireworks canvas */
-#fireworks {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
-  z-index: 4;
+@keyframes fadeInPoem {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
