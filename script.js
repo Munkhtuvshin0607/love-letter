@@ -76,22 +76,8 @@ const poems = [
   ];
   
   let index = 0;
-  const poemEl = document.getElementById("poem");
-  const nextBtn = document.getElementById("nextPoem");
-  
-  nextBtn.addEventListener("click", () => {
-    if (index < poems.length) {
-      poemEl.innerText = poems[index];
-      index++;
-    } else {
-      poemEl.innerText = "🎉 Хамгийн сүүлчийн мөр... 💖";
-      nextBtn.disabled = true;
-    }
-  });
-  
-  // Дуу autoplay
+  const showPoem = document.getElementById("showPoem");
+  const poemBox = document.getElementById("poem-container");
   const music = document.getElementById("bgMusic");
-  window.addEventListener("click", () => {
-    music.play();
-  });
+  const playB
   
